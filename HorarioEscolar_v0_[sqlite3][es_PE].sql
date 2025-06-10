@@ -9,7 +9,7 @@ CREATE TABLE IF NOT EXISTS [Alumno]
 DROP TABLE IF EXISTS [Asignatura];
 CREATE TABLE IF NOT EXISTS [Asignatura] 
 (
-	[id] CHAR(64) NOT NULL,
+	[id] CHAR(36) NOT NULL,
 	[denominación] VARCHAR(128) NOT NULL,
 	PRIMARY KEY([id])
 ) WITHOUT RowId;
