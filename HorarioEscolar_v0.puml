@@ -1,0 +1,34 @@
+@startuml p1
+
+	hide circle
+	skin rose
+	hide empty members
+	
+	entity Alumno {
+		*id : CHAR
+		nombre_completo : VARCHAR
+	}
+
+	entity Asignatura {
+		*id : CHAR
+		denominación : VARCHAR
+	}
+
+	entity HorarioEscolar {
+		*id : CHAR
+		id_alumno : CHAR
+	}
+
+	entity DetalleHorarioEscolar {
+		*id : INTEGER
+		id_horarioEscolar : CHAR
+		id_asignatura : CHAR
+		día : INTEGER
+		hora_inicial : INTEGER
+		hora_cierre : INTEGER
+	}
+
+	Alumno ||-d-|| HorarioEscolar 
+	HorarioEscolar ||-d-o{ DetalleHorarioEscolar
+	DetalleHorarioEscolar ||-r-o{ Asignatura
+@enduml
