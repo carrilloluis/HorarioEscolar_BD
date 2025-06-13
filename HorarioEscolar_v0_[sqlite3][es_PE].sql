@@ -1,3 +1,10 @@
+/*
+@description Gestión de los horarios académicos personales de los estudiantes
+@author Luis Carrillo Gutiérrez
+@date Setiembre, 2017
+@version 0.0.1
+*/
+
 DROP TABLE IF EXISTS [Alumno];
 CREATE TABLE IF NOT EXISTS [Alumno]
 (
